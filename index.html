@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱宠平台 - 公益驱动的宠物生态服务平台</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">🐾</span>
+                <span class="logo-text">爱宠平台</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero">首页</a></li>
+                <li><a href="#about">关于我们</a></li>
+                <li><a href="#features">核心业务</a></li>
+                <li><a href="#advantages">核心优势</a></li>
+                <li><a href="#tech">技术架构</a></li>
+                <li><a href="#market">市场分析</a></li>
+
+            </ul>
+            <a href="#contact" class="nav-cta">立即体验</a>
+            <button class="hamburger" id="hamburger" aria-label="菜单">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-particles" id="particles"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="hero-badge">🐾 公益 + 商业 · 双闭环生态</span>
+                <h1>让每一只流浪猫<br><span class="gradient-text">都拥有温暖的家</span></h1>
+                <p class="hero-subtitle">爱宠平台首创"C端宠主APP + B端门店管理 + 流浪动物公益救助"三位一体模式，以公益驱动商业，以商业反哺公益，构建可持续发展的宠物生态闭环。</p>
+                <div class="hero-actions">
+                    <a href="#features" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> 了解业务模式
+                    </a>
+                    <a href="#about" class="btn btn-secondary">
+                        <i class="fas fa-play-circle"></i> 平台介绍
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="8">0</span>
+                        <span class="stat-label">核心业务板块</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="3">0</span>
+                        <span class="stat-label">端协同架构</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="1000">0</span>
+                        <span class="stat-unit">亿+</span>
+                        <span class="stat-label">市场规模潜力</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="app-header">
+                            <div class="app-logo-small">🐾 爱宠</div>
+                            <div class="app-icons">
+                                <i class="fas fa-bell"></i>
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                        </div>
+                        <div class="app-content">
+                            <div class="app-card welcome-card">
+                                <h3>今日公益积分</h3>
+                                <div class="points">+128</div>
+                                <p>已帮助 3 只流浪猫</p>
+                            </div>
+                            <div class="app-card">
+                                <div class="service-grid">
+                                    <div class="service-item">
+                                        <i class="fas fa-heart"></i>
+                                        <span>公益救助</span>
+                                    </div>
+                                    <div class="service-item">
+                                        <i class="fas fa-calendar-check"></i>
+                                        <span>预约服务</span>
+                                    </div>
+                                    <div class="service-item">
+                                        <i class="fas fa-store"></i>
+                                        <span>用品商城</span>
+                                    </div>
+                                    <div class="service-item">
+                                        <i class="fas fa-users"></i>
+                                        <span>社区互动</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="app-card">
+                                <h4>附近公益伙伴</h4>
+                                <div class="store-list">
+                                    <div class="store-item">
+                                        <div class="store-avatar">🏥</div>
+                                        <div class="store-info">
+                                            <span class="store-name">萌宠之家宠物医院</span>
+                                            <span class="store-distance">0.8km</span>
+                                        </div>
+                                    </div>
+                                    <div class="store-item">
+                                        <div class="store-avatar">🏪</div>
+                                        <div class="store-info">
+                                            <span class="store-name">爱宠生活馆</span>
+                                            <span class="store-distance">1.2km</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-tabbar">
+                            <div class="tab active"><i class="fas fa-home"></i><span>首页</span></div>
+                            <div class="tab"><i class="fas fa-heart"></i><span>公益</span></div>
+                            <div class="tab"><i class="fas fa-paw"></i><span>服务</span></div>
+                            <div class="tab"><i class="fas fa-shopping-bag"></i><span>商城</span></div>
+                            <div class="tab"><i class="fas fa-user"></i><span>我的</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-card card-1">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>数据安全加密</span>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <span>公益透明可追溯</span>
+                </div>
+                <div class="floating-card card-3">
+                    <i class="fas fa-chart-line"></i>
+                    <span>智能健康档案</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,80 1440,60 L1440,120 L0,120 Z" fill="#ffffff"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">关于我们</span>
+                <h2>公益引流 · 商业反哺 · 社区联动</h2>
+                <p>构建可持续发展的宠物公益生态闭环</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon" style="background: linear-gradient(135deg, #ff6b6b, #ee5a24);">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>项目背景</h3>
+                    <p>聚焦城市流浪猫治理难题，结合宠物经济发展趋势，探索公益与商业融合的创新模式。城市流浪猫无序繁殖、伤病救助难、弃养频发，已成为影响社区和谐的突出问题。</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon" style="background: linear-gradient(135deg, #6c5ce7, #a29bfe);">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>我们的使命</h3>
+                    <p>打造"公益+商业"双闭环，实现商业价值与社会价值的统一。通过数字化平台连接宠物主、公益组织和商业服务，让每一次消费都成为对流浪动物的关爱。</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon" style="background: linear-gradient(135deg, #00b894, #55efc4);">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>团队优势</h3>
+                    <p>上海交通大学MEM/MBA/MPA硕士团队，技术、管理、市场、运营全方位覆盖。16年数字化项目管理经验，PMP认证，资深数字化转型顾问，执行力强。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 商业模式 -->
+    <section class="business-model" id="business">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">商业模式</span>
+                <h2>三位一体 · 双闭环驱动</h2>
+                <p>公益引流带动用户增长，商业反哺保障可持续运营</p>
+            </div>
+            <div class="model-flow">
+                <div class="flow-center">
+                    <div class="flow-hub">
+                        <i class="fas fa-sync-alt"></i>
+                        <span>可持续闭环</span>
+                    </div>
+                </div>
+                <div class="flow-items">
+                    <div class="flow-item" style="--delay: 0">
+                        <div class="flow-icon">🐱</div>
+                        <h4>公益救助</h4>
+                        <p>TNR绝育、紧急救助、伤病治疗</p>
+                    </div>
+                    <div class="flow-item" style="--delay: 1">
+                        <div class="flow-icon">🏠</div>
+                        <h4>社区联动</h4>
+                        <p>志愿者、社区、街道、医院多方协作</p>
+                    </div>
+                    <div class="flow-item" style="--delay: 2">
+                        <div class="flow-icon">💰</div>
+                        <h4>商业服务</h4>
+                        <p>会员费、交易佣金、增值服务</p>
+                    </div>
+                    <div class="flow-item" style="--delay: 3">
+                        <div class="flow-icon">🔄</div>
+                        <h4>利润反哺</h4>
+                        <p>商业利润定向投入公益项目</p>
+                    </div>
+                </div>
+            </div>
+            <div class="model-highlights">
+                <div class="highlight-card">
+                    <div class="highlight-num">01</div>
+                    <h4>地方补贴支持</h4>
+                    <p>以上海为代表的城市，持续落地全域流浪猫免费绝育公益政策，为项目提供坚实的资金支持基础。</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-num">02</div>
+                    <h4>社区联动网络</h4>
+                    <p>联动志愿者、社区、街道、医院等多方力量，构建覆盖救助、服务、治理的综合网络。</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-num">03</div>
+                    <h4>商业反哺闭环</h4>
+                    <p>将商业服务产生的利润，部分用于补贴公益项目，实现可持续造血，打造"公益+商业"双闭环。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心业务 -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">核心业务</span>
+                <h2>八大业务板块</h2>
+                <p>覆盖宠物全生命周期与流浪动物救助全链路</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card main-feature">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #ff6b6b, #ee5a24);">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>公益救助服务</h3>
+                    <p>提供TNR绝育、紧急救助、伤病治疗、临时寄养、公益领养等标准化服务。以公益爱心值体系为核心，创新会员运营模式。</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> TNR绝育计划</li>
+                        <li><i class="fas fa-check"></i> 紧急医疗救助</li>
+                        <li><i class="fas fa-check"></i> 临时寄养服务</li>
+                        <li><i class="fas fa-check"></i> 公益领养匹配</li>
+                    </ul>
+                </div>
+                <div class="feature-card main-feature">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #6c5ce7, #a29bfe);">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <h3>宠物便民服务</h3>
+                    <p>打造家养宠物电子档案、智能健康提醒、线上预约、洗护体验、用品商城等一站式便民服务。</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> 电子健康档案</li>
+                        <li><i class="fas fa-check"></i> 智能健康提醒</li>
+                        <li><i class="fas fa-check"></i> 在线预约服务</li>
+                        <li><i class="fas fa-check"></i> 用品商城</li>
+                    </ul>
+                </div>
+                <div class="feature-card main-feature">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #00b894, #55efc4);">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>政企联动服务</h3>
+                    <p>对接街道、社区、动保协会，承接流浪动物治理项目，助力城市精细化治理。</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> 街道社区对接</li>
+                        <li><i class="fas fa-check"></i> 动保协会协作</li>
+                        <li><i class="fas fa-check"></i> 城市治理项目</li>
+                        <li><i class="fas fa-check"></i> 数据报告服务</li>
+                    </ul>
+                </div>
+                <div class="feature-card main-feature">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #fdcb6e, #e17055);">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>公益生态服务</h3>
+                    <p>搭建公益商城、公益社区、志愿调度平台，打造透明、可参与、有活力的公益生态。</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> 公益商城</li>
+                        <li><i class="fas fa-check"></i> 公益社区</li>
+                        <li><i class="fas fa-check"></i> 志愿调度平台</li>
+                        <li><i class="fas fa-check"></i> 透明化运营</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心优势 -->
+    <section class="advantages" id="advantages">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">核心竞争力</span>
+                <h2>四大核心优势</h2>
+                <p>立足千亿蓝海市场，精准定位，构建独特竞争优势</p>
+            </div>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-num">01</div>
+                    <div class="advantage-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3>双端闭环优势</h3>
+                    <p>独创"C端宠主APP + B端门店管理 + 流浪动物公益救助"三位一体模式，形成独特服务壁垒。公益信任与社区场景壁垒，用户消费自动参与救助，形成情感连接和品牌忠诚。</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-num">02</div>
+                    <div class="advantage-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>全周期数字档案</h3>
+                    <p>覆盖宠物从家养到救助的全生命周期记录，大幅提升用户粘性与使用价值。电子档案实现宠物信息的完整追踪与管理。</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-num">03</div>
+                    <div class="advantage-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>公益驱动运营</h3>
+                    <p>以公益爱心值体系为核心，创新会员运营模式，有效提升用户复购与年度留存。商业反哺公益，构建稳定可持续的资金供给体系。</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-num">04</div>
+                    <div class="advantage-icon">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </div>
+                    <h3>轻量化可拓展</h3>
+                    <p>提供基础版低价入门，并开放AI问诊、IoT硬件、供应链等增值模块，满足不同客户多元需求。灵活的模块化设计支持快速扩展。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技术架构 -->
+    <section class="tech" id="tech">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">技术架构</span>
+                <h2>行业领先的技术保障</h2>
+                <p>分层解耦、高效协同、全链路安全</p>
+            </div>
+            <div class="tech-arch">
+                <div class="arch-layer">
+                    <div class="layer-header">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h4>前端交互层</h4>
+                    </div>
+                    <div class="layer-items">
+                        <span class="layer-tag">用户APP</span>
+                        <span class="layer-tag">商家后台</span>
+                        <span class="layer-tag">运营端</span>
+                        <span class="layer-tag">小程序</span>
+                    </div>
+                </div>
+                <div class="arch-arrow"><i class="fas fa-exchange-alt"></i></div>
+                <div class="arch-layer">
+                    <div class="layer-header">
+                        <i class="fas fa-server"></i>
+                        <h4>微服务集群</h4>
+                    </div>
+                    <div class="layer-items">
+                        <span class="layer-tag">用户服务</span>
+                        <span class="layer-tag">订单服务</span>
+                        <span class="layer-tag">公益服务</span>
+                        <span class="layer-tag">消息中间件</span>
+                    </div>
+                </div>
+                <div class="arch-arrow"><i class="fas fa-exchange-alt"></i></div>
+                <div class="arch-layer">
+                    <div class="layer-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>安全防护层</h4>
+                    </div>
+                    <div class="layer-items">
+                        <span class="layer-tag">AES加密</span>
+                        <span class="layer-tag">RBAC权限</span>
+                        <span class="layer-tag">MFA认证</span>
+                        <span class="layer-tag">IDS/IPS</span>
+                    </div>
+                </div>
+                <div class="arch-arrow"><i class="fas fa-exchange-alt"></i></div>
+                <div class="arch-layer">
+                    <div class="layer-header">
+                        <i class="fas fa-database"></i>
+                        <h4>数据存储层</h4>
+                    </div>
+                    <div class="layer-items">
+                        <span class="layer-tag">分布式存储</span>
+                        <span class="layer-tag">数据脱敏</span>
+                        <span class="layer-tag">合规体系</span>
+                        <span class="layer-tag">灾备方案</span>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-features">
+                <div class="tech-card">
+                    <div class="tech-card-icon"><i class="fas fa-cogs"></i></div>
+                    <h4>三层微服务架构</h4>
+                    <p>用户APP、商家后台、运营端三端协同；消息中间件与集群部署技术，从容应对高并发业务场景。</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-card-icon"><i class="fas fa-lock"></i></div>
+                    <h4>全链路数据安全</h4>
+                    <p>基于AES标准进行全链路数据加密与脱敏；结合RBAC与MFA机制实施分级权限管控。</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-card-icon"><i class="fas fa-puzzle-piece"></i></div>
+                    <h4>场景定制化模块</h4>
+                    <p>自主研发适配猫咪公益行业的TNR、流浪救助等定制化功能模块，深耕数据合规领域。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 市场分析 -->
+    <section class="market" id="market">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">市场分析</span>
+                <h2>千亿蓝海市场</h2>
+                <p>宠物经济与公益治理双重机遇</p>
+            </div>
+            <div class="market-grid">
+                <div class="market-card">
+                    <div class="market-icon">🏠</div>
+                    <h4>社会问题凸显</h4>
+                    <p>城市中流浪猫无序繁殖、伤病救助难、弃养频发，已成为影响社区和谐与公共卫生的突出社会问题。</p>
+                </div>
+                <div class="market-card">
+                    <div class="market-icon">💝</div>
+                    <h4>公益救助困境</h4>
+                    <p>现有公益救助渠道分散、资金不透明、效率低下，无法满足庞大的流浪动物救助需求。</p>
+                </div>
+                <div class="market-card">
+                    <div class="market-icon">👥</div>
+                    <h4>用户需求多元</h4>
+                    <p>宠物主不仅需要优质的养宠服务，更渴望便捷地参与公益活动，实现情感价值与社交需求。</p>
+                </div>
+                <div class="market-card">
+                    <div class="market-icon">📈</div>
+                    <h4>行业模式陈旧</h4>
+                    <p>传统宠物店获客成本高、信任建立难、用户复购率低，同质化竞争严重，商业模式亟待创新。</p>
+                </div>
+            </div>
+            <div class="market-opportunity">
+                <div class="opportunity-visual">
+                    <div class="opp-circle">
+                        <div class="opp-inner">
+                            <span class="opp-number">1000亿+</span>
+                            <span class="opp-label">市场潜力</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="opportunity-content">
+                    <h3>独特竞争优势</h3>
+                    <div class="opp-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>公益信任壁垒</strong>
+                            <p>平台以公益为背书，用户消费自动参与救助，形成情感连接和品牌忠诚</p>
+                        </div>
+                    </div>
+                    <div class="opp-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>社区场景深耕</strong>
+                            <p>深入社区治理场景，构建覆盖救助、服务、治理的综合网络</p>
+                        </div>
+                    </div>
+                    <div class="opp-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>交大资源网络</strong>
+                            <p>依托上海交大MEM、MBA、MPA等校友网络，获得技术、社区、市场、企业合作和公益资源的强力支持</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 运营策略 -->
+    <section class="strategy" id="strategy">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">运营策略</span>
+                <h2>双轮驱动增长</h2>
+                <p>商业反哺公益 · 公益赋能门店</p>
+            </div>
+            <div class="strategy-grid">
+                <div class="strategy-card">
+                    <div class="strategy-header">
+                        <div class="strategy-icon">💰</div>
+                        <h3>商业反哺公益</h3>
+                    </div>
+                    <p>平台将会员费、交易佣金等商业服务收益，定向投入流浪猫的紧急救助、TNR绝育计划及医疗支持，打破传统公益"靠捐赠"的被动模式，构建稳定、可持续的公益资金供给体系。</p>
+                    <div class="strategy-tags">
+                        <span>会员费</span>
+                        <span>交易佣金</span>
+                        <span>增值服务</span>
+                    </div>
+                </div>
+                <div class="strategy-card">
+                    <div class="strategy-header">
+                        <div class="strategy-icon">🏪</div>
+                        <h3>公益赋能门店</h3>
+                    </div>
+                    <p>为主题门店赋予"公益伙伴"身份，通过公益活动引流和品牌背书，提升消费者信任度与复购率。帮助线下门店沉淀私有会员资产，有效解决"获客难、转化低、留存弱"的核心经营痛点。</p>
+                    <div class="strategy-tags">
+                        <span>低成本获客</span>
+                        <span>品牌增值</span>
+                        <span>会员沉淀</span>
+                    </div>
+                </div>
+            </div>
+            <div class="service-cycle">
+                <h3>四位一体服务体系</h3>
+                <div class="cycle-items">
+                    <div class="cycle-item">
+                        <div class="cycle-icon">🏥</div>
+                        <span>救助</span>
+                    </div>
+                    <div class="cycle-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="cycle-item">
+                        <div class="cycle-icon">💉</div>
+                        <span>医疗</span>
+                    </div>
+                    <div class="cycle-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="cycle-item">
+                        <div class="cycle-icon">🏠</div>
+                        <span>领养</span>
+                    </div>
+                    <div class="cycle-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="cycle-item">
+                        <div class="cycle-icon">📚</div>
+                        <span>科普</span>
+                    </div>
+                </div>
+                <p class="cycle-desc">实现商业价值与社会价值的共生共赢</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA区域 -->
+    <section class="cta" id="contact">
+        <div class="container">
+            <div class="cta-content">
+                <h2>加入爱宠平台</h2>
+                <p>一起用科技和爱心，为每一只流浪猫创造更好的未来</p>
+                <div class="cta-actions">
+                    <a href="#" class="btn btn-primary btn-large">
+                        <i class="fas fa-download"></i> 下载APP
+                    </a>
+                    <a href="#" class="btn btn-secondary btn-large">
+                        <i class="fas fa-store"></i> 商家入驻
+                    </a>
+                    <a href="#" class="btn btn-outline btn-large">
+                        <i class="fas fa-handshake"></i> 合作咨询
+                    </a>
+                </div>
+                <div class="cta-contact">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@aichong.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>400-888-AICHONG</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>上海市 · 上海交通大学</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🐾</span>
+                        <span class="logo-text">爱宠平台</span>
+                    </div>
+                    <p>公益驱动的宠物生态服务平台，让每一只流浪猫都拥有温暖的家。</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fas fa-video"></i></a>
+                        <a href="#"><i class="fas fa-blog"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>平台服务</h4>
+                    <ul>
+                        <li><a href="#">公益救助</a></li>
+                        <li><a href="#">宠物服务</a></li>
+                        <li><a href="#">用品商城</a></li>
+                        <li><a href="#">商家入驻</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">平台介绍</a></li>
+                        <li><a href="#">团队成员</a></li>
+                        <li><a href="#">发展历程</a></li>
+                        <li><a href="#">加入我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">使用指南</a></li>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">联系客服</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 爱宠平台 All Rights Reserved | 沪ICP备XXXXXXXX号</p>
+                <div class="footer-bottom-links">
+                    <a href="#">隐私政策</a>
+                    <a href="#">用户协议</a>
+                    <a href="#">公益透明报告</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
