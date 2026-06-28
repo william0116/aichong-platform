@@ -28,26 +28,28 @@
 
 ## 本地运行
 
-直接在浏览器中打开 `index.html` 文件即可预览：
-
+PC端官网：
 ```bash
-# macOS
+# 直接打开
 open index.html
+```
 
-# Windows
-start index.html
-
-# Linux
-xdg-open index.html
+移动端界面：
+```bash
+# 直接打开
+open mobile.html
 ```
 
 ## 项目结构
 
 ```
 aichong-platform/
-├── index.html      # 主页面
-├── styles.css      # 样式文件
-├── script.js       # 交互脚本
+├── index.html      # PC端官网
+├── styles.css      # PC端样式
+├── script.js       # PC端交互脚本
+├── mobile.html     # 移动端界面
+├── mobile.css      # 移动端样式
+├── mobile.js       # 移动端交互脚本
 ├── .gitignore      # Git忽略文件
 └── README.md       # 项目说明
 ```

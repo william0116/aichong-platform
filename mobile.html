@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>爱宠平台 - 移动端</title>
+    <link rel="stylesheet" href="mobile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 状态栏模拟 -->
+    <div class="status-bar">
+        <span class="time">9:41</span>
+        <div class="status-icons">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- 主要内容区域 -->
+    <main class="app-container" id="appContainer">
+        <!-- 页面：首页 -->
+        <section class="page active" id="page-home">
+            <header class="app-header">
+                <div class="header-left">
+                    <span class="greeting">下午好 👋</span>
+                    <h2>爱宠平台</h2>
+                </div>
+                <div class="header-right">
+                    <button class="icon-btn"><i class="fas fa-bell"></i><span class="badge">3</span></button>
+                    <button class="icon-btn"><i class="fas fa-comment-dots"></i></button>
+                </div>
+            </header>
+
+            <div class="scroll-content">
+                <!-- 搜索栏 -->
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="搜索宠物服务、公益救助...">
+                    <button class="filter-btn"><i class="fas fa-sliders-h"></i></button>
+                </div>
+
+                <!-- 公益积分卡片 -->
+                <div class="points-card">
+                    <div class="points-bg"></div>
+                    <div class="points-content">
+                        <div class="points-info">
+                            <span class="points-label">今日公益积分</span>
+                            <div class="points-value">
+                                <span class="points-number">+128</span>
+                                <span class="points-trend"><i class="fas fa-arrow-up"></i> 12%</span>
+                            </div>
+                            <p class="points-desc">已帮助 <strong>3</strong> 只流浪猫</p>
+                        </div>
+                        <div class="points-action">
+                            <button class="btn-earn">做公益</button>
+                        </div>
+                    </div>
+                    <div class="points-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%"></div>
+                        </div>
+                        <span class="progress-text">距离下一级还需 200 积分</span>
+                    </div>
+                </div>
+
+                <!-- 快捷功能 -->
+                <div class="quick-actions">
+                    <div class="action-item" onclick="switchTab('welfare')">
+                        <div class="action-icon" style="background: linear-gradient(135deg, #ff6b6b, #ee5a24);">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <span>公益救助</span>
+                    </div>
+                    <div class="action-item" onclick="switchTab('service')">
+                        <div class="action-icon" style="background: linear-gradient(135deg, #6c5ce7, #a29bfe);">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <span>预约服务</span>
+                    </div>
+                    <div class="action-item" onclick="switchTab('mall')">
+                        <div class="action-icon" style="background: linear-gradient(135deg, #00b894, #55efc4);">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <span>用品商城</span>
+                    </div>
+                    <div class="action-item" onclick="switchTab('community')">
+                        <div class="action-icon" style="background: linear-gradient(135deg, #fdcb6e, #e17055);">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <span>社区互动</span>
+                    </div>
+                    <div class="action-item">
+                        <div class="action-icon" style="background: linear-gradient(135deg, #0984e3, #74b9ff);">
+                            <i class="fas fa-hospital"></i>
+                        </div>
+                        <span>附近医院</span>
+                    </div>
+                    <div class="action-item">
+                        <div class="action-icon" style="background: linear-gradient(135deg, #e84393, #fd79a8);">
+                            <i class="fas fa-paw"></i>
+                        </div>
+                        <span>领养中心</span>
+                    </div>
+                    <div class="action-item">
+                        <div class="action-icon" style="background: linear-gradient(135deg, #00cec9, #81ecec);">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <span>附近门店</span>
+                    </div>
+                    <div class="action-item">
+                        <div class="action-icon" style="background: linear-gradient(135deg, #636e72, #b2bec3);">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                        <span>更多</span>
+                    </div>
+                </div>
+
+                <!-- 我的宠物 -->
+                <div class="section">
+                    <div class="section-header">
+                        <h3>我的宠物</h3>
+                        <a href="#" class="see-all">查看全部 <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="pet-cards">
+                        <div class="pet-card">
+                            <div class="pet-avatar">🐱</div>
+                            <div class="pet-info">
+                                <h4>小橘</h4>
+                                <p>橘猫 · 3岁</p>
+                            </div>
+                            <div class="pet-health">
+                                <span class="health-tag good">健康</span>
+                            </div>
+                        </div>
+                        <div class="pet-card add-pet">
+                            <div class="add-icon"><i class="fas fa-plus"></i></div>
+                            <span>添加宠物</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 附近公益伙伴 -->
+                <div class="section">
+                    <div class="section-header">
+                        <h3>附近公益伙伴</h3>
+                        <a href="#" class="see-all">更多 <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="store-cards">
+                        <div class="store-card">
+                            <div class="store-image">
+                                <div class="store-emoji">🏥</div>
+                                <span class="store-badge">公益伙伴</span>
+                            </div>
+                            <div class="store-info">
+                                <h4>萌宠之家宠物医院</h4>
+                                <div class="store-meta">
+                                    <span><i class="fas fa-star"></i> 4.8</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> 0.8km</span>
+                                </div>
+                                <div class="store-tags">
+                                    <span>绝育手术</span>
+                                    <span>疫苗接种</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="store-card">
+                            <div class="store-image">
+                                <div class="store-emoji">🏪</div>
+                                <span class="store-badge">公益伙伴</span>
+                            </div>
+                            <div class="store-info">
+                                <h4>爱宠生活馆</h4>
+                                <div class="store-meta">
+                                    <span><i class="fas fa-star"></i> 4.6</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> 1.2km</span>
+                                </div>
+                                <div class="store-tags">
+                                    <span>宠物洗护</span>
+                                    <span>用品销售</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 公益动态 -->
+                <div class="section">
+                    <div class="section-header">
+                        <h3>公益动态</h3>
+                        <a href="#" class="see-all">更多 <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="news-feed">
+                        <div class="news-item">
+                            <div class="news-image">🐱</div>
+                            <div class="news-content">
+                                <h4>流浪猫"小花"成功完成TNR手术</h4>
+                                <p>在志愿者的帮助下，小花已完成绝育手术，目前恢复良好...</p>
+                                <div class="news-meta">
+                                    <span><i class="fas fa-heart"></i> 128</span>
+                                    <span><i class="fas fa-comment"></i> 23</span>
+                                    <span>2小时前</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <div class="news-image">🏥</div>
+                            <div class="news-content">
+                                <h4>社区公益领养日活动预告</h4>
+                                <p>本周六将在社区广场举办公益领养日，欢迎前来参与...</p>
+                                <div class="news-meta">
+                                    <span><i class="fas fa-heart"></i> 256</span>
+                                    <span><i class="fas fa-comment"></i> 45</span>
+                                    <span>5小时前</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom-spacer"></div>
+            </div>
+        </section>
+
+        <!-- 页面：公益救助 -->
+        <section class="page" id="page-welfare">
+            <header class="app-header">
+                <div class="header-left">
+                    <button class="back-btn" onclick="switchTab('home')"><i class="fas fa-arrow-left"></i></button>
+                    <h2>公益救助</h2>
+                </div>
+                <div class="header-right">
+                    <button class="icon-btn"><i class="fas fa-history"></i></button>
+                </div>
+            </header>
+            <div class="scroll-content">
+                <div class="welfare-banner">
+                    <div class="banner-content">
+                        <h3>流浪猫救助计划</h3>
+                        <p>已救助 <strong>1,234</strong> 只流浪猫</p>
+                        <button class="btn-primary">立即参与</button>
+                    </div>
+                </div>
+
+                <div class="welfare-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">🐱</div>
+                        <div class="stat-value">1,234</div>
+                        <div class="stat-label">已救助</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">💉</div>
+                        <div class="stat-value">856</div>
+                        <div class="stat-label">已绝育</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🏠</div>
+                        <div class="stat-value">423</div>
+                        <div class="stat-label">已领养</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">❤️</div>
+                        <div class="stat-value">5,678</div>
+                        <div class="stat-label">志愿者</div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">
+                        <h3>待救助动物</h3>
+                    </div>
+                    <div class="rescue-list">
+                        <div class="rescue-item">
+                            <div class="rescue-image">🐱</div>
+                            <div class="rescue-info">
+                                <h4>小可怜</h4>
+                                <p>腿部受伤，急需医疗救助</p>
+                                <div class="rescue-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 75%"></div>
+                                    </div>
+                                    <span>已筹 ¥750 / ¥1,000</span>
+                                </div>
+                            </div>
+                            <button class="btn-donate">捐助</button>
+                        </div>
+                        <div class="rescue-item">
+                            <div class="rescue-image">🐱</div>
+                            <div class="rescue-info">
+                                <h4>花花</h4>
+                                <p>怀孕待产，需要临时寄养</p>
+                                <div class="rescue-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 45%"></div>
+                                    </div>
+                                    <span>已筹 ¥450 / ¥1,000</span>
+                                </div>
+                            </div>
+                            <button class="btn-donate">捐助</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom-spacer"></div>
+            </div>
+        </section>
+
+        <!-- 页面：服务 -->
+        <section class="page" id="page-service">
+            <header class="app-header">
+                <div class="header-left">
+                    <button class="back-btn" onclick="switchTab('home')"><i class="fas fa-arrow-left"></i></button>
+                    <h2>宠物服务</h2>
+                </div>
+            </header>
+            <div class="scroll-content">
+                <div class="service-categories">
+                    <div class="category-item active">全部</div>
+                    <div class="category-item">洗护美容</div>
+                    <div class="category-item">医疗服务</div>
+                    <div class="category-item">寄养托管</div>
+                    <div class="category-item">训练指导</div>
+                </div>
+
+                <div class="service-list">
+                    <div class="service-card">
+                        <div class="service-image">🛁</div>
+                        <div class="service-info">
+                            <h4>基础洗护套餐</h4>
+                            <p>包含洗澡、吹干、修剪指甲、清理耳朵</p>
+                            <div class="service-price">
+                                <span class="price">¥128</span>
+                                <span class="original-price">¥168</span>
+                            </div>
+                            <div class="service-meta">
+                                <span><i class="fas fa-star"></i> 4.9</span>
+                                <span>已售 326</span>
+                            </div>
+                        </div>
+                        <button class="btn-book">预约</button>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-image">💉</div>
+                        <div class="service-info">
+                            <h4>疫苗接种服务</h4>
+                            <p>猫三联疫苗接种，含健康检查</p>
+                            <div class="service-price">
+                                <span class="price">¥280</span>
+                            </div>
+                            <div class="service-meta">
+                                <span><i class="fas fa-star"></i> 4.8</span>
+                                <span>已售 156</span>
+                            </div>
+                        </div>
+                        <button class="btn-book">预约</button>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-image">🏠</div>
+                        <div class="service-info">
+                            <h4>周末寄养服务</h4>
+                            <p>专业人员照看，每日反馈照片视频</p>
+                            <div class="service-price">
+                                <span class="price">¥98</span>
+                                <span class="unit">/天</span>
+                            </div>
+                            <div class="service-meta">
+                                <span><i class="fas fa-star"></i> 4.7</span>
+                                <span>已售 89</span>
+                            </div>
+                        </div>
+                        <button class="btn-book">预约</button>
+                    </div>
+                </div>
+
+                <div class="bottom-spacer"></div>
+            </div>
+        </section>
+
+        <!-- 页面：商城 -->
+        <section class="page" id="page-mall">
+            <header class="app-header">
+                <div class="header-left">
+                    <button class="back-btn" onclick="switchTab('home')"><i class="fas fa-arrow-left"></i></button>
+                    <h2>用品商城</h2>
+                </div>
+                <div class="header-right">
+                    <button class="icon-btn"><i class="fas fa-shopping-cart"></i><span class="badge">2</span></button>
+                </div>
+            </header>
+            <div class="scroll-content">
+                <div class="mall-banner">
+                    <div class="banner-slide">
+                        <div class="banner-text">
+                            <h3>新人专享</h3>
+                            <p>首单立减 ¥20</p>
+                        </div>
+                        <div class="banner-emoji">🎁</div>
+                    </div>
+                </div>
+
+                <div class="mall-categories">
+                    <div class="mall-cat-item">
+                        <div class="cat-icon">🍖</div>
+                        <span>猫粮</span>
+                    </div>
+                    <div class="mall-cat-item">
+                        <div class="cat-icon">🧸</div>
+                        <span>玩具</span>
+                    </div>
+                    <div class="mall-cat-item">
+                        <div class="cat-icon">🛏️</div>
+                        <span>猫窝</span>
+                    </div>
+                    <div class="mall-cat-item">
+                        <div class="cat-icon">🧹</div>
+                        <span>清洁</span>
+                    </div>
+                    <div class="mall-cat-item">
+                        <div class="cat-icon">💊</div>
+                        <span>保健</span>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">
+                        <h3>热销商品</h3>
+                    </div>
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <div class="product-image">🍖</div>
+                            <div class="product-badge">公益商品</div>
+                            <h4>天然无谷猫粮 5kg</h4>
+                            <div class="product-price">
+                                <span class="price">¥168</span>
+                                <span class="original">¥228</span>
+                            </div>
+                            <div class="product-meta">
+                                <span>已售 1.2k</span>
+                                <span class="donate">捐 ¥5</span>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image">🧸</div>
+                            <h4>逗猫棒套装</h4>
+                            <div class="product-price">
+                                <span class="price">¥39</span>
+                            </div>
+                            <div class="product-meta">
+                                <span>已售 856</span>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image">🛏️</div>
+                            <div class="product-badge">公益商品</div>
+                            <h4>四季通用猫窝</h4>
+                            <div class="product-price">
+                                <span class="price">¥89</span>
+                                <span class="original">¥129</span>
+                            </div>
+                            <div class="product-meta">
+                                <span>已售 523</span>
+                                <span class="donate">捐 ¥3</span>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image">🧹</div>
+                            <h4>猫砂盆套装</h4>
+                            <div class="product-price">
+                                <span class="price">¥128</span>
+                            </div>
+                            <div class="product-meta">
+                                <span>已售 432</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom-spacer"></div>
+            </div>
+        </section>
+
+        <!-- 页面：社区 -->
+        <section class="page" id="page-community">
+            <header class="app-header">
+                <div class="header-left">
+                    <button class="back-btn" onclick="switchTab('home')"><i class="fas fa-arrow-left"></i></button>
+                    <h2>社区互动</h2>
+                </div>
+                <div class="header-right">
+                    <button class="icon-btn"><i class="fas fa-pen"></i></button>
+                </div>
+            </header>
+            <div class="scroll-content">
+                <div class="community-tabs">
+                    <div class="comm-tab active">推荐</div>
+                    <div class="comm-tab">救助故事</div>
+                    <div class="comm-tab">养宠经验</div>
+                    <div class="comm-tab">活动</div>
+                </div>
+
+                <div class="post-list">
+                    <div class="post-item">
+                        <div class="post-header">
+                            <div class="post-avatar">👩</div>
+                            <div class="post-user">
+                                <h5>小王同学</h5>
+                                <span>2小时前</span>
+                            </div>
+                            <button class="follow-btn">关注</button>
+                        </div>
+                        <div class="post-content">
+                            <p>今天带小橘去打了疫苗，医生说它很健康！感谢爱宠平台的公益补贴，省了不少钱 🐱</p>
+                            <div class="post-images">
+                                <div class="post-img">🐱</div>
+                                <div class="post-img">💉</div>
+                            </div>
+                        </div>
+                        <div class="post-actions">
+                            <button><i class="fas fa-heart"></i> 128</button>
+                            <button><i class="fas fa-comment"></i> 23</button>
+                            <button><i class="fas fa-share"></i> 分享</button>
+                        </div>
+                    </div>
+                    <div class="post-item">
+                        <div class="post-header">
+                            <div class="post-avatar">👨</div>
+                            <div class="post-user">
+                                <h5>志愿者小李</h5>
+                                <span>5小时前</span>
+                            </div>
+                            <button class="follow-btn">关注</button>
+                        </div>
+                        <div class="post-content">
+                            <p>周末参加了社区TNR活动，帮助了5只流浪猫完成绝育。希望它们以后能过得更好 ❤️ #公益救助 #TNR</p>
+                        </div>
+                        <div class="post-actions">
+                            <button><i class="fas fa-heart"></i> 256</button>
+                            <button><i class="fas fa-comment"></i> 45</button>
+                            <button><i class="fas fa-share"></i> 分享</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom-spacer"></div>
+            </div>
+        </section>
+
+        <!-- 页面：我的 -->
+        <section class="page" id="page-profile">
+            <header class="app-header">
+                <div class="header-left">
+                    <h2>我的</h2>
+                </div>
+                <div class="header-right">
+                    <button class="icon-btn"><i class="fas fa-cog"></i></button>
+                </div>
+            </header>
+            <div class="scroll-content">
+                <div class="profile-card">
+                    <div class="profile-avatar">
+                        <div class="avatar">👤</div>
+                        <div class="profile-info">
+                            <h3>爱宠用户</h3>
+                            <p>公益爱心值：<strong>1,280</strong></p>
+                        </div>
+                    </div>
+                    <div class="profile-level">
+                        <span class="level-badge">爱心天使 Lv.3</span>
+                    </div>
+                </div>
+
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">12</div>
+                        <div class="stat-label">公益次数</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">¥580</div>
+                        <div class="stat-label">公益捐赠</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">3</div>
+                        <div class="stat-label">我的宠物</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">28</div>
+                        <div class="stat-label">订单数</div>
+                    </div>
+                </div>
+
+                <div class="menu-section">
+                    <h4>我的服务</h4>
+                    <div class="menu-list">
+                        <div class="menu-item">
+                            <div class="menu-icon" style="background: #ff6b6b;"><i class="fas fa-heart"></i></div>
+                            <span>我的公益</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-icon" style="background: #6c5ce7;"><i class="fas fa-file-alt"></i></div>
+                            <span>宠物档案</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-icon" style="background: #00b894;"><i class="fas fa-calendar-alt"></i></div>
+                            <span>预约记录</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-icon" style="background: #fdcb6e;"><i class="fas fa-shopping-bag"></i></div>
+                            <span>我的订单</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-section">
+                    <h4>其他功能</h4>
+                    <div class="menu-list">
+                        <div class="menu-item">
+                            <div class="menu-icon" style="background: #0984e3;"><i class="fas fa-map-marker-alt"></i></div>
+                            <span>收货地址</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-icon" style="background: #e84393;"><i class="fas fa-headset"></i></div>
+                            <span>客服中心</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-icon" style="background: #636e72;"><i class="fas fa-info-circle"></i></div>
+                            <span>关于我们</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom-spacer"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 底部导航栏 -->
+    <nav class="tab-bar">
+        <div class="tab-item active" onclick="switchTab('home')">
+            <i class="fas fa-home"></i>
+            <span>首页</span>
+        </div>
+        <div class="tab-item" onclick="switchTab('welfare')">
+            <i class="fas fa-heart"></i>
+            <span>公益</span>
+        </div>
+        <div class="tab-item" onclick="switchTab('service')">
+            <i class="fas fa-paw"></i>
+            <span>服务</span>
+        </div>
+        <div class="tab-item" onclick="switchTab('mall')">
+            <i class="fas fa-shopping-bag"></i>
+            <span>商城</span>
+        </div>
+        <div class="tab-item" onclick="switchTab('profile')">
+            <i class="fas fa-user"></i>
+            <span>我的</span>
+        </div>
+    </nav>
+
+    <!-- iPhone 外壳（可选） -->
+    <div class="phone-frame" id="phoneFrame">
+        <div class="phone-notch"></div>
+        <div class="phone-button"></div>
+    </div>
+
+    <script src="mobile.js"></script>
+</body>
+</html>
